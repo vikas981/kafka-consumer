@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo
+    username: viksingh
+    password: Vikas98@a
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8081
+
+
+kafka-config:
+  boot-strap-servers: http://localhost:9092
+  no-of-partitions: 1
+  replication-factor: 1
+  topic-name: test-topic
+
+
+kafka-consumer-config:
+  boot-strap-servers: http://localhost:9092
+  key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+  value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
